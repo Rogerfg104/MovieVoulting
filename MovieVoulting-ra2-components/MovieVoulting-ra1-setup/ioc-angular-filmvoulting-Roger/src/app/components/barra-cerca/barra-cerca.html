@@ -1,0 +1,22 @@
+<form>
+
+<label>Cercar pel·lícula</label>
+
+<input
+type="text"
+[(ngModel)]="text"
+name="cerca"
+minlength="3"
+required
+#input="ngModel"
+/>
+
+<button (click)="buscar()" [disabled]="input.invalid">
+Buscar
+</button>
+
+<div *ngIf="input.invalid && input.touched">
+mínim 3 caràcters
+</div>
+
+</form>

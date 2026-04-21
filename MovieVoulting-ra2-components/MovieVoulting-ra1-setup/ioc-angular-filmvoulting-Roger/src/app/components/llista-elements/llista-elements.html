@@ -1,0 +1,14 @@
+<div *ngIf="elementsFiltrats.length > 0; else buit">
+
+  <app-targeta-element
+  *ngFor="let element of elementsFiltrats; trackBy: trackById"
+  [element]="element"
+  (seleccionat)="rebreSeleccio($event)"
+  >
+  </app-targeta-element>
+
+</div>
+
+<ng-template #buit>
+<p>No hi ha resultats</p>
+</ng-template>
