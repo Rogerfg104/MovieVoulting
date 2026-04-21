@@ -4,7 +4,7 @@ import { app } from './app';
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [App],
+      imports: [app],
     }).compileComponents();
   });
 
@@ -15,7 +15,7 @@ describe('App', () => {
   });
 
   it('should render title', async () => {
-    const fixture = TestBed.createComponent(App);
+    const fixture = TestBed.createComponent(app);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ioc-angular-filmvoulting-Roger');

@@ -1,0 +1,29 @@
+<form [formGroup]="form">
+
+  <input type="text" formControlName="terme" placeholder="Cercar...">
+
+  <button *ngIf="form.get('terme')?.value" (click)="netejar()">
+    Netejar
+  </button>
+
+  <div *ngIf="form.get('terme')?.touched">
+
+    <p *ngIf="form.get('terme')?.errors?.['minlength']">
+      Mínim 2 caràcters
+    </p>
+
+    <p *ngIf="form.get('terme')?.errors?.['maxlength']">
+      Màxim 50 caràcters
+    </p>
+
+    <p *ngIf="form.get('terme')?.pending">
+      Validant...
+    </p>
+
+    <p *ngIf="form.get('terme')?.errors?.['sensResultats']">
+      No hi ha resultats
+    </p>
+
+  </div>
+
+</form>
