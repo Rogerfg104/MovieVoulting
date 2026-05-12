@@ -1,59 +1,43 @@
-# IocAngularFilmvoultingRoger
+# FilmVoulting - Projecte Angular (EAC4)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.1.
+**Alumne:** Roger Font  
+**Assignatura:** Programació Avançada (Angular)  
+**Unitat:** Unitat 4 – Navegació i optimització (RA4)
 
-## Development server
+## Descripció del Projecte
+FilmVoulting és una aplicació web dissenyada per gestionar un catàleg de pel·lícules. Permet als usuaris navegar per una col·lecció de films, cercar títols específics, veure detalls detallats de cada pel·lícula i gestionar una llista personal de preferits mitjançant un sistema d'autenticació.
 
-To start a local development server, run:
+## Mapa de Rutes
+L'aplicació utilitza el sistema de rutes d'Angular per a una navegació fluida (SPA):
 
-```bash
-ng serve
-```
+| Path | Component | Accés |
+|------|-----------|-------|
+| `/cataleg` | `CatalegPage` | Públic |
+| `/cerca` | `CercaPage` | Públic |
+| `/detall/:id` | `DetallPage` | Públic |
+| `/preferits` | `PreferitsPage` | Privat (Lazy Loaded) |
+| `/login` | `LoginPage` | Públic |
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Instruccions d'execució en local
 
-## Code scaffolding
+1.  **Clonar el repositori:**
+    ```bash
+    git clone <url-del-repositori>
+    ```
+2.  **Instal·lar dependències:**
+    ```bash
+    npm install
+    ```
+3.  **Executar en mode desenvolupament:**
+    ```bash
+    ng serve
+    ```
+4.  **Obrir al navegador:**
+    Navegar a `http://localhost:4200/`
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Principals Funcionalitats Implementades
+- **Navegació Avançada**: Rutes amb paràmetres, redireccions i gestió de rutes no trobades (wildcard).
+- **Control d'Accés**: Protecció de rutes privades mitjançant `AuthGuard`.
+- **Lazy Loading**: Càrrega diferida del mòdul de preferits per optimitzar el bundle inicial.
+- **Optimització de Rendiment**: Estratègia `OnPush` en components presentacionals i Virtual Scroll per a llistes extenses usant l'Angular CDK.
+- **Build de Producció**: Generació de bundle optimitzat per a desplegament.

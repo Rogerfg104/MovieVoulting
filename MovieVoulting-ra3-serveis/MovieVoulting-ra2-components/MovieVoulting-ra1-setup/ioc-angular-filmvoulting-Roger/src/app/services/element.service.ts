@@ -1,6 +1,6 @@
 import { Injectable, signal, computed } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment.ts';
+import { environment } from '../../environments/environment';
 import { ElementCataleg } from '../models/element.mode';
 import { adaptarElementsApi } from '../adaptadors/element.adaptador';
 

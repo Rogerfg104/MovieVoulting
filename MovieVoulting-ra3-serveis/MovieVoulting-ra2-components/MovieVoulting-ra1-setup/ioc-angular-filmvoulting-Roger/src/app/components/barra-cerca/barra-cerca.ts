@@ -1,12 +1,13 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-barra-cerca',
   standalone: true,
-  imports:[FormsModule],
-  templateUrl: './barra-cerca.component.html',
-  styleUrl: './barra-cerca.component.scss'
+  imports:[FormsModule, CommonModule],
+  templateUrl: './barra-cerca.html',
+  styleUrl: './barra-cerca.scss'
 })
 export class BarraCercaComponent {
 

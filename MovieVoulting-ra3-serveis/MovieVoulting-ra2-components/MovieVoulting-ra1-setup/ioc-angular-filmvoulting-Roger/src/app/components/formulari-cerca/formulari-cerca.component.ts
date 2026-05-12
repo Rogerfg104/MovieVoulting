@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-formulari-cerca',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './formulari-cerca.component.html'
+  templateUrl: './formulari-cerca.html'
 })
 export class FormulariCercaComponent implements OnInit {
 
